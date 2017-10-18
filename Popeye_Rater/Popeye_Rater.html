@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Popeye Rater</title>
+
+	<!-- 	IMPORTANT!!!!
+			Before using:
+			- Set for loop for images to correct amount of pictures
+			- Setup counter html to correct number of pictures
+			- HARDCODE ARRAYS FOR EACH RATER ??
+ -->
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+
+	<script type="text/javascript" src="src/rater.js"></script>
+
+</head>
+
+<body onload="buildImage();">
+<!-- Images -->
+	<div class="contents" id="content"></div>
+<!-- Forms and buttons -->
+<div id="formWrapper">
+<!-- ProgressCunter -->
+	<div id="counter" class="counterBox text" >Case 1 of 134.</div>
+<!-- Popeye rating buttons -->
+	<div id="popeyeScoreBox" class="checkboxPop">
+		<p class="text">Popeye sign present?</p>
+		<label class="control control--radio">YES
+			<input type="radio" name="popeyescore" id="popeyeNo" value="1">
+			<div class="control__indicator"></div>
+		</label>
+		<label class="control control--radio">NO
+			<input type="radio" name="popeyescore" id="popeyeYes" value="0">
+			<div class="control__indicator"></div>
+		</label>
+	</div>
+<!-- Likert rating buttons -->
+	<div id="likertScoreBox" class="checkboxLik">
+		<p class="text">How certain are you?</p>
+		<label class="control control--radio">Very Certain
+			<input type="radio" name="likertScore" id="veryC" value="5">
+			<div class="control__indicator"></div>
+		</label>
+		<label class="control control--radio">Slightly Certain
+			<input type="radio" name="likertScore" id="slightlyC" value="4">
+			<div class="control__indicator"></div>
+		</label>
+		<label class="control control--radio">Neither Certain nor Uncertain
+			<input type="radio" name="likertScore" id="neitherCoU" value="3">
+			<div class="control__indicator"></div>
+		</label>	
+		<label class="control control--radio">Slightly Uncertain
+			<input type="radio" name="likertScore" id="slightlyU" value="2">
+			<div class="control__indicator"></div>
+		</label>
+		<label class="control control--radio">Very Uncertain
+			<input type="radio" name="likertScore" id="veryU" value="1">
+			<div class="control__indicator"></div>
+		</label>	
+	</div>
+<!-- Next button -->
+	<button class="button" id="nextImageButton" style="vertical-align:middle" onclick="nextImage()"><span>NEXT </span></button>
+</div>
+<!-- Download button -->
+	<button class="hidden" id="downloadButton" onclick="printDataBaseArr()">DOWNLOAD CSV</button>
+
+</body>
+</html>
